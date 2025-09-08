@@ -29,4 +29,5 @@ public class AnalyseController {
         return ResponseEntity.ok(aiService.callAi(analyseDto.getSpeech()));
 
     }
+
 }
