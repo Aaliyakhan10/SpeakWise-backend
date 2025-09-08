@@ -19,6 +19,6 @@ RUN ./gradlew clean build --no-daemon -x test --stacktrace --info
 # Stage 2: Create the runtime image
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-COPY --from=build /app/build/libs/AutoCap-0.0.1-SNAPSHOT.jar /app/application.jar
+COPY --from=build /app/build/libs/SpeakWise-0.0.1-SNAPSHOT.jar /app/application.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "application.jar"]
